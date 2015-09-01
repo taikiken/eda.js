@@ -639,6 +639,7 @@
             "description": "location.search から keyName value を返します",
             "itemtype": "method",
             "name": "find",
+            "static": 1,
             "params": [
                 {
                     "name": "keyName",

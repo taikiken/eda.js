@@ -131,6 +131,7 @@
     /**
      * location.search から keyName value を返します
      * @method find
+     * @static
      * @param {string} keyName
      * @return {*} location.search keyName value を返します
      */
