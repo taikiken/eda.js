@@ -38,7 +38,9 @@
         },
         "src/util/Query.js": {
             "name": "src/util/Query.js",
-            "modules": {},
+            "modules": {
+                "Query": 1
+            },
             "classes": {
                 "Query": 1
             },
@@ -47,7 +49,9 @@
         },
         "src/util/Str.js": {
             "name": "src/util/Str.js",
-            "modules": {},
+            "modules": {
+                "Str": 1
+            },
             "classes": {},
             "fors": {},
             "namespaces": {}
@@ -67,7 +71,9 @@
             "name": "Eda",
             "submodules": {
                 "Kana": 1,
-                "Num": 1
+                "Num": 1,
+                "Query": 1,
+                "Str": 1
             },
             "elements": {},
             "classes": {
@@ -80,7 +86,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "src/util/Query.js",
-            "line": 24,
+            "line": 31,
             "type": "{*}"
         },
         "Kana": {
@@ -115,6 +121,36 @@
             "file": "src/util/Num.js",
             "line": 32,
             "description": "数にまつわる Utilities"
+        },
+        "Query": {
+            "name": "Query",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Query": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Eda",
+            "namespace": "",
+            "file": "src/util/Query.js",
+            "line": 31,
+            "description": "window.location.search utility"
+        },
+        "Str": {
+            "name": "Str",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Eda",
+            "namespace": "",
+            "file": "src/util/Str.js",
+            "line": 15,
+            "description": "文字 Utility"
         }
     },
     "classes": {
@@ -176,9 +212,10 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Eda",
+            "submodule": "Query",
             "namespace": "",
             "file": "src/util/Query.js",
-            "line": 24,
+            "line": 31,
             "is_constructor": 1
         }
     },
@@ -525,7 +562,7 @@
         },
         {
             "file": "src/util/Query.js",
-            "line": 37,
+            "line": 44,
             "itemtype": "method",
             "name": "parse",
             "params": [
@@ -537,11 +574,12 @@
                 }
             ],
             "class": "Query",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Query"
         },
         {
             "file": "src/util/Query.js",
-            "line": 50,
+            "line": 57,
             "itemtype": "method",
             "name": "find",
             "params": [
@@ -556,11 +594,12 @@
                 "type": "*"
             },
             "class": "Query",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Query"
         },
         {
             "file": "src/util/Query.js",
-            "line": 73,
+            "line": 80,
             "itemtype": "method",
             "name": "search",
             "static": 1,
@@ -569,11 +608,12 @@
                 "type": "String"
             },
             "class": "Query",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Query"
         },
         {
             "file": "src/util/Query.js",
-            "line": 84,
+            "line": 91,
             "itemtype": "method",
             "name": "parse",
             "static": 1,
@@ -590,11 +630,12 @@
                 "type": "*"
             },
             "class": "Query",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Query"
         },
         {
             "file": "src/util/Query.js",
-            "line": 124,
+            "line": 131,
             "description": "location.search から keyName value を返します",
             "itemtype": "method",
             "name": "find",
@@ -610,7 +651,8 @@
                 "type": "*"
             },
             "class": "Query",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Query"
         },
         {
             "file": "src/util/Str.js",
@@ -621,7 +663,7 @@
         },
         {
             "file": "src/util/Str.js",
-            "line": 34,
+            "line": 40,
             "description": "文字長を検査します",
             "itemtype": "method",
             "name": "long",
@@ -643,11 +685,12 @@
                 "type": "Boolean"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 48,
+            "line": 54,
             "description": "mail address validate\n\nメール形式簡易チェック",
             "itemtype": "method",
             "name": "mail",
@@ -664,11 +707,12 @@
                 "type": "Boolean"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 67,
+            "line": 73,
             "itemtype": "method",
             "name": "phone",
             "params": [
@@ -693,11 +737,12 @@
                 "type": "Boolean"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 172,
+            "line": 178,
             "itemtype": "method",
             "name": "zip",
             "static": 1,
@@ -718,11 +763,12 @@
                 "type": "*"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 216,
+            "line": 222,
             "description": "改行コードを LF へ統一します",
             "itemtype": "method",
             "name": "lf",
@@ -739,11 +785,12 @@
                 "type": "Void|string|XML"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 229,
+            "line": 235,
             "description": "改行コードを削除します",
             "itemtype": "method",
             "name": "removeNL",
@@ -760,11 +807,12 @@
                 "type": "Void|string|XML"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 242,
+            "line": 248,
             "description": "スペースを削除します",
             "itemtype": "method",
             "name": "removeSpace",
@@ -781,11 +829,12 @@
                 "type": "Void|string|XML"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 255,
+            "line": 261,
             "description": "Tabコードを削除します",
             "itemtype": "method",
             "name": "removeTab",
@@ -802,11 +851,12 @@
                 "type": "Void|string|XML"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 268,
+            "line": 274,
             "description": "white space(space, tab, new line) を全て削除します",
             "itemtype": "method",
             "name": "removeWhitespace",
@@ -822,7 +872,8 @@
                 "type": "Void|string|XML"
             },
             "class": "",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Str"
         },
         {
             "file": "src/eda.js",

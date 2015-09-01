@@ -9,7 +9,9 @@ YUI.add("yuidoc-meta", function(Y) {
     "modules": [
         "Eda",
         "Kana",
-        "Num"
+        "Num",
+        "Query",
+        "Str"
     ],
     "allModules": [
         {
@@ -25,6 +27,16 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "Num",
             "name": "Num",
             "description": "数にまつわる Utilities"
+        },
+        {
+            "displayName": "Query",
+            "name": "Query",
+            "description": "window.location.search utility"
+        },
+        {
+            "displayName": "Str",
+            "name": "Str",
+            "description": "文字 Utility"
         }
     ],
     "elements": []
