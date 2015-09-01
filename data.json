@@ -1,0 +1,871 @@
+{
+    "project": {
+        "name": "eda.js",
+        "description": "utilities",
+        "url": "https://github.com/taikiken/eda.js"
+    },
+    "files": {
+        "src/util/Kana.js": {
+            "name": "src/util/Kana.js",
+            "modules": {
+                "Kana": 1
+            },
+            "classes": {
+                "Kana": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/util/List.js": {
+            "name": "src/util/List.js",
+            "modules": {},
+            "classes": {
+                "List": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/util/Num.js": {
+            "name": "src/util/Num.js",
+            "modules": {
+                "Num": 1
+            },
+            "classes": {
+                "Num": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/util/Query.js": {
+            "name": "src/util/Query.js",
+            "modules": {},
+            "classes": {
+                "Query": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/util/Str.js": {
+            "name": "src/util/Str.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/eda.js": {
+            "name": "src/eda.js",
+            "modules": {
+                "Eda": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "Eda": {
+            "name": "Eda",
+            "submodules": {
+                "Kana": 1,
+                "Num": 1
+            },
+            "elements": {},
+            "classes": {
+                "Kana": 1,
+                "List": 1,
+                "Num": 1,
+                "Query": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/util/Query.js",
+            "line": 24,
+            "type": "{*}"
+        },
+        "Kana": {
+            "name": "Kana",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Kana": 1,
+                "List": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Eda",
+            "namespace": "",
+            "file": "src/util/List.js",
+            "line": 32,
+            "description": "日本語判定処理"
+        },
+        "Num": {
+            "name": "Num",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Num": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Eda",
+            "namespace": "",
+            "file": "src/util/Num.js",
+            "line": 32,
+            "description": "数にまつわる Utilities"
+        }
+    },
+    "classes": {
+        "Kana": {
+            "name": "Kana",
+            "shortname": "Kana",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Eda",
+            "submodule": "Kana",
+            "namespace": "",
+            "file": "src/util/Kana.js",
+            "line": 28,
+            "description": "日本語文字判定 Utility",
+            "static": 1,
+            "is_constructor": 1
+        },
+        "List": {
+            "name": "List",
+            "shortname": "List",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Eda",
+            "submodule": "Kana",
+            "namespace": "",
+            "file": "src/util/List.js",
+            "line": 32,
+            "description": "Array ヘルパー",
+            "static": 1,
+            "is_constructor": 1
+        },
+        "Num": {
+            "name": "Num",
+            "shortname": "Num",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Eda",
+            "submodule": "Num",
+            "namespace": "",
+            "file": "src/util/Num.js",
+            "line": 32,
+            "is_constructor": 1
+        },
+        "Query": {
+            "name": "Query",
+            "shortname": "Query",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Eda",
+            "namespace": "",
+            "file": "src/util/Query.js",
+            "line": 24,
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "src/util/Kana.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 16:19\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "class": "Kana"
+        },
+        {
+            "file": "src/util/Kana.js",
+            "line": 41,
+            "itemtype": "method",
+            "name": "kanji",
+            "static": 1,
+            "params": [
+                {
+                    "name": "txt",
+                    "description": "判定文字列",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "漢字かどうかの真偽値を返します",
+                "type": "Boolean"
+            },
+            "class": "Kana",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/Kana.js",
+            "line": 65,
+            "itemtype": "method",
+            "name": "hiragana",
+            "static": 1,
+            "params": [
+                {
+                    "name": "txt",
+                    "description": "判定文字列",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "ひらがなか否かの真偽値を返します",
+                "type": "Boolean"
+            },
+            "class": "Kana",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/Kana.js",
+            "line": 78,
+            "itemtype": "method",
+            "name": "katakana",
+            "static": 1,
+            "params": [
+                {
+                    "name": "txt",
+                    "description": "判定文字列",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "カナか否かの真偽値を返します",
+                "type": "Boolean"
+            },
+            "class": "Kana",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/Kana.js",
+            "line": 91,
+            "itemtype": "method",
+            "name": "hankaku",
+            "static": 1,
+            "params": [
+                {
+                    "name": "txt",
+                    "description": "判定文字列",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "半角文字か否かの真偽値を返します",
+                "type": "Boolean"
+            },
+            "class": "Kana",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/Kana.js",
+            "line": 104,
+            "itemtype": "method",
+            "name": "zenkaku",
+            "static": 1,
+            "params": [
+                {
+                    "name": "txt",
+                    "description": "判定文字列",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "全角か否かの真偽値を返します",
+                "type": "Boolean"
+            },
+            "class": "Kana",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/Kana.js",
+            "line": 117,
+            "itemtype": "method",
+            "name": "alphabetic",
+            "static": 1,
+            "params": [
+                {
+                    "name": "txt",
+                    "description": "判定文字列",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "アルファベットか否かの真偽値を返します、スペースはfalseです",
+                "type": "Boolean"
+            },
+            "class": "Kana",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/List.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 17:14\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "class": "List",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/List.js",
+            "line": 45,
+            "description": "word で埋められた配列を length 長分作成します",
+            "itemtype": "method",
+            "name": "word",
+            "static": 1,
+            "params": [
+                {
+                    "name": "length",
+                    "description": "",
+                    "type": "Int"
+                },
+                {
+                    "name": "word",
+                    "description": "",
+                    "type": "Int|string"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "List",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/List.js",
+            "line": 68,
+            "description": "0 で埋められた配列を length 長分作成します",
+            "itemtype": "method",
+            "name": "zero",
+            "static": 1,
+            "params": [
+                {
+                    "name": "length",
+                    "description": "",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "List",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/List.js",
+            "line": 84,
+            "description": "配列をシャッフルします",
+            "itemtype": "method",
+            "name": "shuffle",
+            "static": 1,
+            "params": [
+                {
+                    "name": "array",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "シャッフル後の配列を返します",
+                "type": "Array"
+            },
+            "class": "List",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/List.js",
+            "line": 118,
+            "itemtype": "method",
+            "name": "shuffle2",
+            "static": 1,
+            "params": [
+                {
+                    "name": "array",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "シャッフル後の配列を返します",
+                "type": "Array"
+            },
+            "class": "List",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/List.js",
+            "line": 149,
+            "description": "配列内の最大数値を返します\n\n配列は全て数値で無いといけません\n\n文字が含まれていると NaN を返します",
+            "itemtype": "method",
+            "name": "max",
+            "static": 1,
+            "params": [
+                {
+                    "name": "arr",
+                    "description": "検証対象の配列、内部は全部数値 [Number, [Number]]",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "配列内の最大数値を返します",
+                "type": "Number"
+            },
+            "class": "List",
+            "module": "Eda",
+            "submodule": "Kana"
+        },
+        {
+            "file": "src/util/Num.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 16:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "class": "Num",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Num.js",
+            "line": 43,
+            "description": "3桁毎にカンマ(,)を挿入します",
+            "itemtype": "method",
+            "name": "comma",
+            "static": 1,
+            "params": [
+                {
+                    "name": "n",
+                    "description": "",
+                    "type": "Number|string"
+                }
+            ],
+            "return": {
+                "description": "カンマ挿入後の文字列を返します",
+                "type": "String"
+            },
+            "class": "Num",
+            "module": "Eda",
+            "submodule": "Num"
+        },
+        {
+            "file": "src/util/Num.js",
+            "line": 56,
+            "description": "範囲指定乱数生成",
+            "itemtype": "method",
+            "name": "random",
+            "static": 1,
+            "params": [
+                {
+                    "name": "min",
+                    "description": "最小値",
+                    "type": "Number"
+                },
+                {
+                    "name": "max",
+                    "description": "最大値 optional",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "min ~ max 間の乱数(Int)を発生させます",
+                "type": "Number"
+            },
+            "class": "Num",
+            "module": "Eda",
+            "submodule": "Num"
+        },
+        {
+            "file": "src/util/Num.js",
+            "line": 84,
+            "description": "数値チェック\n\n文字型でも true になる場合があります\n\n'10': true, typeof '10': string",
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "",
+                    "type": "*"
+                }
+            ],
+            "return": {
+                "description": "true: Number, false: not Number",
+                "type": "Boolean"
+            },
+            "class": "Num",
+            "module": "Eda",
+            "submodule": "Num"
+        },
+        {
+            "file": "src/util/Query.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 17:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "class": "Query",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Query.js",
+            "line": 37,
+            "itemtype": "method",
+            "name": "parse",
+            "params": [
+                {
+                    "name": "search",
+                    "description": "window.location.search.substring( 1 )",
+                    "type": "String=undefined",
+                    "optional": true
+                }
+            ],
+            "class": "Query",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Query.js",
+            "line": 50,
+            "itemtype": "method",
+            "name": "find",
+            "params": [
+                {
+                    "name": "keyName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Query",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Query.js",
+            "line": 73,
+            "itemtype": "method",
+            "name": "search",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Query",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Query.js",
+            "line": 84,
+            "itemtype": "method",
+            "name": "parse",
+            "static": 1,
+            "params": [
+                {
+                    "name": "search",
+                    "description": "window.location.search.substring( 1 )",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Query",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Query.js",
+            "line": 124,
+            "description": "location.search から keyName value を返します",
+            "itemtype": "method",
+            "name": "find",
+            "params": [
+                {
+                    "name": "keyName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "location.search keyName value を返します",
+                "type": "*"
+            },
+            "class": "Query",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 18:02\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 34,
+            "description": "文字長を検査します",
+            "itemtype": "method",
+            "name": "long",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "検査対象文字列",
+                    "type": "String"
+                },
+                {
+                    "name": "long",
+                    "description": "文字長",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "文字列 length が文字長と同じかの真偽値を返します",
+                "type": "Boolean"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 48,
+            "description": "mail address validate\n\nメール形式簡易チェック",
+            "itemtype": "method",
+            "name": "mail",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "検査対象文字列",
+                    "type": "String"
+                }
+            ],
+            "static": 1,
+            "return": {
+                "description": "文字列がメール形式かの真偽値を返します",
+                "type": "Boolean"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 67,
+            "itemtype": "method",
+            "name": "phone",
+            "params": [
+                {
+                    "name": "phone1",
+                    "description": "市外局番",
+                    "type": "String|number"
+                },
+                {
+                    "name": "phone2",
+                    "description": "市内番号",
+                    "type": "String|number"
+                },
+                {
+                    "name": "phone3",
+                    "description": "識別番号",
+                    "type": "String|number"
+                }
+            ],
+            "return": {
+                "description": "電話番号形式かを返します",
+                "type": "Boolean"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 172,
+            "itemtype": "method",
+            "name": "zip",
+            "static": 1,
+            "params": [
+                {
+                    "name": "zip1",
+                    "description": "",
+                    "type": "Number|string"
+                },
+                {
+                    "name": "zip2",
+                    "description": "",
+                    "type": "Number|string"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 216,
+            "description": "改行コードを LF へ統一します",
+            "itemtype": "method",
+            "name": "lf",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void|string|XML"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 229,
+            "description": "改行コードを削除します",
+            "itemtype": "method",
+            "name": "removeNL",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void|string|XML"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 242,
+            "description": "スペースを削除します",
+            "itemtype": "method",
+            "name": "removeSpace",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void|string|XML"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 255,
+            "description": "Tabコードを削除します",
+            "itemtype": "method",
+            "name": "removeTab",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void|string|XML"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/util/Str.js",
+            "line": 268,
+            "description": "white space(space, tab, new line) を全て削除します",
+            "itemtype": "method",
+            "name": "removeWhitespace",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void|string|XML"
+            },
+            "class": "",
+            "module": "Eda"
+        },
+        {
+            "file": "src/eda.js",
+            "line": 1,
+            "license": "inazumatv.com",
+            "author": "(at)taikiken / http://inazumatv.com",
+            "date": "15/09/01 - 16:17\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nversion @@version\nbuild @@buildTime\ngithub: @@url",
+            "class": "",
+            "module": "Eda"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: license",
+            "line": " src/eda.js:1"
+        },
+        {
+            "message": "unknown tag: date",
+            "line": " src/eda.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 16:19\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "line": " src/util/Kana.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 17:14\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "line": " src/util/List.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 16:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "line": " src/util/Num.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 17:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "line": " src/util/Query.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 18:02\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
+            "line": " src/util/Str.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/eda.js:1"
+        }
+    ]
+}

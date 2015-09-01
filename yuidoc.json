@@ -1,0 +1,12 @@
+{
+  "name": "eda.js",
+  "description": "utilities",
+  "url": "https://github.com/taikiken/eda.js",
+  "options": {
+    "linkNatives": "true",
+    "attributesEmit": "true",
+    "outdir": "./",
+    "paths": ["./src"],
+    "exclude": "./src/dependencies/*.js"
+  }
+}
