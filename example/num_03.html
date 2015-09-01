@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>Number</title>
+  <script src="../libs/eda.js"></script>
+  <style>
+    .answer {
+      display: inline-block;
+      padding: 3px;
+      border: 1px solid #ccc;
+    }
+    .red {
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+<h2>Number</h2>
+<h3>Num.random</h3>
+
+<p>
+  <span id="s01">0,10</span>
+  <span id="s01-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s02">5,10</span>
+  <span id="s02-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s03">-10,10</span>
+  <span id="s03-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s04">100</span>
+  <span id="s04-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s05">5</span>
+  <span id="s05-answer" class="answer"></span>
+</p>
+
+<script>
+  ( function ( window ) {
+
+    'use strict';
+
+    var
+      document = window.document,
+      Eda = window.Eda;
+
+    function check ( id ) {
+
+      var
+        element = document.getElementById( id ),
+        str,
+        split,
+        result,
+        answer,
+        min,
+        max,
+        i;
+
+      str = element.innerHTML;
+      split = str.split( ',' );
+      min = split[ 0 ];
+      max = split[ 1 ];
+      answer = document.getElementById( id + '-answer' );
+
+      result = '';
+
+      for ( i = 0; i < 100; i = (i + 1)|0 ) {
+
+         result += i + ': <strong class="red">' + Eda.Num.random( min, max ) + '</strong>, ';
+
+      }
+
+      answer.innerHTML = result;
+
+    }
+
+
+    check( 's01' );
+    check( 's02' );
+    check( 's03' );
+    check( 's04' );
+    check( 's05' );
+
+  }( window ) );
+</script>
+</body>
+</html>

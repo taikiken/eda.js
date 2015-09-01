@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>Number</title>
+  <script src="../libs/eda.js"></script>
+  <style>
+    .answer {
+      display: inline-block;
+      padding: 3px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+<h2>Number</h2>
+<h3>Num.comma</h3>
+<p>
+  <span id="s01">1000</span>
+  <span id="s01-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s02">99</span>
+  <span id="s02-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s03">9999999</span>
+  <span id="s03-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s04">12345678</span>
+  <span id="s04-answer" class="answer"></span>
+</p>
+
+<script>
+  ( function ( window ) {
+
+    'use strict';
+
+    var
+      document = window.document,
+      Eda = window.Eda;
+
+    function check ( id ) {
+
+      var
+        element = document.getElementById( id ),
+        str,
+        answer;
+
+      str = element.innerHTML;
+      answer = document.getElementById( id + '-answer' );
+
+      answer.innerHTML = Eda.Num.comma( str );
+
+    }
+
+
+    check( 's01' );
+    check( 's02' );
+    check( 's03' );
+    check( 's04' );
+
+  }( window ) );
+</script>
+</body>
+</html>

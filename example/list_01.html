@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>Number</title>
+  <script src="../libs/eda.js"></script>
+  <style>
+    .answer {
+      /*display: inline-block;*/
+      padding: 3px;
+      border: 1px solid #ccc;
+    }
+    span {
+      display: block;
+    }
+    .red {
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+<h2>List</h2>
+
+<p>
+  <span id="s01">List.word(30, 'abc')</span>
+  <span id="s01-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s02">List.zero(10)</span>
+  <span id="s02-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s03">List.shuffle[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]</span>
+  <span id="s03-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s04">List.shuffle2[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]</span>
+  <span id="s04-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s05">List.max[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]</span>
+  <span id="s05-answer" class="answer"></span>
+</p>
+
+<script>
+  ( function ( window ) {
+
+    'use strict';
+
+    var
+      document = window.document,
+      Eda = window.Eda;
+
+    document.getElementById( 's01-answer' ).innerHTML = Eda.List.word(30, 'abc').toString();
+    document.getElementById( 's02-answer' ).innerHTML = Eda.List.zero(10).toString();
+    document.getElementById( 's03-answer' ).innerHTML = Eda.List.shuffle( [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19] ).toString();
+    document.getElementById( 's04-answer' ).innerHTML = Eda.List.shuffle2( [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19] ).toString();
+    document.getElementById( 's05-answer' ).innerHTML = Eda.List.max( [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19] ).toString();
+
+  }( window ) );
+</script>
+</body>
+</html>
