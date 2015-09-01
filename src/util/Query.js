@@ -12,6 +12,13 @@
  *
  * for eda.js
  */
+/*jslint -W016*/
+/**
+ * window.location.search utility
+ *
+ * @module Eda
+ * @submodule Query
+ */
 ( function ( window ) {
 
   'use strict';

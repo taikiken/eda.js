@@ -12,6 +12,12 @@
  *
  * for eda.js
  */
+/**
+ * 文字 Utility
+ *
+ * @module Eda
+ * @submodule Str
+ */
 ( function ( window ) {
 
   'use strict';
