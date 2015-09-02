@@ -13,9 +13,7 @@
             "classes": {
                 "Cookie": 1
             },
-            "fors": {
-                "CookieUtil": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/net/Query.js": {
@@ -71,7 +69,9 @@
         },
         "src/util/Time.js": {
             "name": "src/util/Time.js",
-            "modules": {},
+            "modules": {
+                "Time": 1
+            },
             "classes": {
                 "Time": 1
             },
@@ -96,25 +96,23 @@
                 "Query": 1,
                 "Kana": 1,
                 "Num": 1,
-                "Str": 1
+                "Str": 1,
+                "Time": 1
             },
             "elements": {},
             "classes": {
                 "Cookie": 1,
-                "CookieUtil": 1,
                 "Query": 1,
                 "Kana": 1,
                 "List": 1,
                 "Num": 1,
                 "Time": 1
             },
-            "fors": {
-                "CookieUtil": 1
-            },
+            "fors": {},
             "namespaces": {},
             "tag": "module",
             "file": "src/util/Time.js",
-            "line": 21,
+            "line": 27,
             "type": "{*}"
         },
         "Cookie": {
@@ -122,12 +120,9 @@
             "submodules": {},
             "elements": {},
             "classes": {
-                "Cookie": 1,
-                "CookieUtil": 1
+                "Cookie": 1
             },
-            "fors": {
-                "CookieUtil": 1
-            },
+            "fors": {},
             "is_submodule": 1,
             "namespaces": {},
             "module": "Eda",
@@ -198,6 +193,22 @@
             "file": "src/util/Str.js",
             "line": 15,
             "description": "文字 Utility"
+        },
+        "Time": {
+            "name": "Time",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Time": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Eda",
+            "namespace": "",
+            "file": "src/util/Time.js",
+            "line": 27,
+            "description": "何日後, 何時間後 時間管理"
         }
     },
     "classes": {
@@ -214,20 +225,9 @@
             "namespace": "",
             "file": "src/net/Cookie.js",
             "line": 39,
+            "description": "cookie utility",
             "static": 1,
             "is_constructor": 1
-        },
-        "CookieUtil": {
-            "name": "CookieUtil",
-            "shortname": "CookieUtil",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Eda",
-            "submodule": "Cookie",
-            "namespace": ""
         },
         "Query": {
             "name": "Query",
@@ -302,9 +302,11 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Eda",
+            "submodule": "Time",
             "namespace": "",
             "file": "src/util/Time.js",
-            "line": 21,
+            "line": 27,
+            "description": "時間管理",
             "static": 1,
             "is_constructor": 1
         }
@@ -319,7 +321,7 @@
         },
         {
             "file": "src/net/Cookie.js",
-            "line": 51,
+            "line": 53,
             "description": "document.cookie 取得",
             "itemtype": "method",
             "name": "item",
@@ -341,7 +343,7 @@
         },
         {
             "file": "src/net/Cookie.js",
-            "line": 73,
+            "line": 75,
             "description": "document.cookie 全て取得し列挙します",
             "itemtype": "method",
             "name": "all",
@@ -356,7 +358,7 @@
         },
         {
             "file": "src/net/Cookie.js",
-            "line": 95,
+            "line": 97,
             "description": "document.cookie 引数 keyName が存在するかを調べます",
             "itemtype": "method",
             "name": "has",
@@ -377,7 +379,7 @@
         },
         {
             "file": "src/net/Cookie.js",
-            "line": 117,
+            "line": 119,
             "description": "document.cookie 削除",
             "itemtype": "method",
             "name": "remove",
@@ -411,10 +413,10 @@
         },
         {
             "file": "src/net/Cookie.js",
-            "line": 142,
+            "line": 144,
             "description": "document.cookie 保存",
             "itemtype": "method",
-            "name": "setItem",
+            "name": "set",
             "params": [
                 {
                     "name": "keyName",
@@ -456,7 +458,7 @@
                 "type": "Boolean"
             },
             "static": 1,
-            "class": "CookieUtil",
+            "class": "Cookie",
             "module": "Eda",
             "submodule": "Cookie"
         },
@@ -1125,51 +1127,55 @@
         },
         {
             "file": "src/util/Time.js",
-            "line": 33,
+            "line": 41,
             "itemtype": "property",
             "name": "SECOND",
             "final": "",
             "default": "1000",
             "type": "{number}",
             "class": "Time",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Time"
         },
         {
             "file": "src/util/Time.js",
-            "line": 39,
+            "line": 47,
             "itemtype": "property",
             "name": "MINUTE",
             "final": "",
             "default": "1000 * 60",
             "type": "{number}",
             "class": "Time",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Time"
         },
         {
             "file": "src/util/Time.js",
-            "line": 45,
+            "line": 53,
             "itemtype": "property",
             "name": "HOUR",
             "final": "",
             "default": "1000 * 60 * 60",
             "type": "{number}",
             "class": "Time",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Time"
         },
         {
             "file": "src/util/Time.js",
-            "line": 51,
+            "line": 59,
             "itemtype": "property",
             "name": "DAY",
             "final": "",
             "default": "1000 * 60 * 60 * 24",
             "type": "{number}",
             "class": "Time",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Time"
         },
         {
             "file": "src/util/Time.js",
-            "line": 58,
+            "line": 66,
             "itemtype": "method",
             "name": "hours",
             "static": 1,
@@ -1185,11 +1191,12 @@
                 "type": "Date"
             },
             "class": "Time",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Time"
         },
         {
             "file": "src/util/Time.js",
-            "line": 69,
+            "line": 77,
             "itemtype": "method",
             "name": "days",
             "static": 1,
@@ -1205,7 +1212,8 @@
                 "type": "Date"
             },
             "class": "Time",
-            "module": "Eda"
+            "module": "Eda",
+            "submodule": "Time"
         },
         {
             "file": "src/eda.js",

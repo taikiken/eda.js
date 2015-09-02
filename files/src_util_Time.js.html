@@ -39,7 +39,6 @@
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
                                 <li><a href="../classes/Cookie.html">Cookie</a></li>
-                                <li><a href="../classes/CookieUtil.html">CookieUtil</a></li>
                                 <li><a href="../classes/Kana.html">Kana</a></li>
                                 <li><a href="../classes/List.html">List</a></li>
                                 <li><a href="../classes/Num.html">Num</a></li>
@@ -55,6 +54,7 @@
                                 <li><a href="../modules/Num.html">Num</a></li>
                                 <li><a href="../modules/Query.html">Query</a></li>
                                 <li><a href="../modules/Str.html">Str</a></li>
+                                <li><a href="../modules/Time.html">Time</a></li>
                             </ul>
                         </div>
                     </div>
@@ -106,6 +106,12 @@
  *
  * for eda.js
  */
+/**
+ * 何日後, 何時間後 時間管理
+ *
+ * @module Eda
+ * @submodule Time
+ */
 ( function ( window ) {
 
   &#x27;use strict&#x27;;
@@ -113,6 +119,8 @@
   window.Eda.Time = ( function () {
 
     /**
+     * 時間管理
+     *
      * @class Time
      * @static
      * @constructor

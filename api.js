@@ -2,7 +2,6 @@ YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
         "Cookie",
-        "CookieUtil",
         "Kana",
         "List",
         "Num",
@@ -15,7 +14,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "Kana",
         "Num",
         "Query",
-        "Str"
+        "Str",
+        "Time"
     ],
     "allModules": [
         {
@@ -46,6 +46,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "Str",
             "name": "Str",
             "description": "文字 Utility"
+        },
+        {
+            "displayName": "Time",
+            "name": "Time",
+            "description": "何日後, 何時間後 時間管理"
         }
     ],
     "elements": []

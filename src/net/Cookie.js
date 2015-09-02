@@ -37,6 +37,8 @@
       _encode = encodeURIComponent;
 
     /**
+     * cookie utility
+     *
      * @class Cookie
      * @static
      * @constructor
@@ -141,8 +143,7 @@
 
     /**
      * document.cookie 保存
-     * @for CookieUtil
-     * @method setItem
+     * @method set
      * @param {String} keyName document.cookie 名称
      * @param {String} value document.cookie value
      * @param {String|Number|Date|*} [end] document.cookie 期限, [ second, Date.toUTCString ]

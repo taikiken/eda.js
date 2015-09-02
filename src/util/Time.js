@@ -12,6 +12,12 @@
  *
  * for eda.js
  */
+/**
+ * 何日後, 何時間後 時間管理
+ *
+ * @module Eda
+ * @submodule Time
+ */
 ( function ( window ) {
 
   'use strict';
@@ -19,6 +25,8 @@
   window.Eda.Time = ( function () {
 
     /**
+     * 時間管理
+     *
      * @class Time
      * @static
      * @constructor
