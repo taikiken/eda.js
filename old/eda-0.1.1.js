@@ -11,7 +11,7 @@
  * This notice shall be included in all copies or substantial portions of the Software.
  *
  * version 0.1.1
- * build 2015-09-02 13:37:48
+ * build 2015-09-02 13:38:27
  * github: https://github.com/taikiken/eda.js
  */
 
@@ -1088,7 +1088,7 @@ var Eda = Eda || {};
 
   'use strict';
 
-  window.eda.Time = ( function () {
+  window.Eda.Time = ( function () {
 
     /**
      * @class Time

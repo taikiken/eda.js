@@ -5,16 +5,13 @@
  *
  * Copyright (c) 2011-2015 inazumatv.com, inc.
  *
- * Distributed under the terms of the MIT license.
- * http://www.opensource.org/licenses/mit-license.html
- *
- * This notice shall be included in all copies or substantial portions of the Software.
+ * This framework is released under the GNU Public License, version 3 or later.
+ * http://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * version 0.1.1
- * build 2015-09-02 13:38:27
+ * build 2015-09-02 14:23:28
  * github: https://github.com/taikiken/eda.js
  */
-
 /**
  * @module Eda
  * @type {*}
@@ -211,6 +208,8 @@ var Eda = Eda || {};
       _encode = encodeURIComponent;
 
     /**
+     * cookie utility
+     *
      * @class Cookie
      * @static
      * @constructor
@@ -315,8 +314,7 @@ var Eda = Eda || {};
 
     /**
      * document.cookie 保存
-     * @for CookieUtil
-     * @method setItem
+     * @method set
      * @param {String} keyName document.cookie 名称
      * @param {String} value document.cookie value
      * @param {String|Number|Date|*} [end] document.cookie 期限, [ second, Date.toUTCString ]
@@ -811,8 +809,13 @@ var Eda = Eda || {};
     var
       Num = Eda.Num;
 
+    /**
+     * @class Str
+     * @static
+     * @constructor
+     */
     function Str () {
-
+      throw new Error( 'Str can\'t create instance!' );
     }
 
     var p = Str.prototype;
@@ -1056,6 +1059,7 @@ var Eda = Eda || {};
      * white space(space, tab, new line) を全て削除します
      *
      * @method removeWhitespace
+     * @static
      * @param {String} str
      * @return {void|string|XML}
      */
@@ -1084,6 +1088,12 @@ var Eda = Eda || {};
  *
  * for eda.js
  */
+/**
+ * 何日後, 何時間後 時間管理
+ *
+ * @module Eda
+ * @submodule Time
+ */
 ( function ( window ) {
 
   'use strict';
@@ -1091,6 +1101,8 @@ var Eda = Eda || {};
   window.Eda.Time = ( function () {
 
     /**
+     * 時間管理
+     *
      * @class Time
      * @static
      * @constructor
