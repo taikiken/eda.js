@@ -11,7 +11,7 @@
  * This notice shall be included in all copies or substantial portions of the Software.
  *
  * version 0.1.0
- * build 2015-09-01 20:07:13
+ * build 2015-09-02 13:31:20
  * github: https://github.com/taikiken/eda.js
  */
 
@@ -21,6 +21,355 @@
  */
 var Eda = Eda || {};
 
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
+ * date 15/09/01 - 17:29
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * for eda.js
+ */
+/*jslint -W016*/
+/**
+ * window.location.search utility
+ *
+ * @module Eda
+ * @submodule Query
+ */
+( function ( window ) {
+
+  'use strict';
+
+  window.Eda.Query = ( function () {
+
+    var
+      _decode = window.decodeURIComponent;
+
+    /**
+     * @class Query
+     * @constructor
+     */
+    function Query () {
+
+      this.results = null;
+
+    }
+
+    var p = Query.prototype;
+    p.constructor = Query;
+
+    /**
+     * @method parse
+     * @param {string=undefined} [search] window.location.search.substring( 1 )
+     */
+    p.parse = function ( search ) {
+
+      var results = Query.parse( search );
+      this.results = results;
+
+      return results;
+
+    };
+
+    /**
+     * @method find
+     * @param {string} keyName
+     * @return {*}
+     */
+    p.find = function ( keyName ) {
+
+      var
+        results = this.results;
+
+      if ( results === null ) {
+
+        results = Query.parse();
+        this.results = results;
+
+      }
+
+      return results[ keyName ];
+
+    };
+
+    // -------------------------------------------------------
+
+    /**
+     * @method search
+     * @static
+     * @return {string}
+     */
+    Query.search = function () {
+
+      return window.location.search.substring( 1 );
+
+    };
+
+    /**
+     *
+     * @method parse
+     * @static
+     * @param {String} [search] window.location.search.substring( 1 )
+     * @return {*}
+     */
+    Query.parse = function ( search ) {
+
+      search = search || Query.search();
+
+      var
+        vars,
+        results,
+        i, limit, pair;
+
+      if ( !!search ) {
+
+
+        search = search.replace( '&amp;', '&' );
+        vars = search.split( '&' );
+        results = {};
+
+        for ( i = 0, limit = vars.length; i < limit; i = (i + 1)|0 ) {
+
+          pair = vars[ i ].split( '=' );
+          if ( pair.length === 2 ) {
+
+            results[ _decode( pair[ 0 ] ) ] = _decode( pair[ 1 ] );
+
+          }
+
+        }
+
+      }
+
+      return results;
+
+    };
+
+    /**
+     * location.search から keyName value を返します
+     * @method find
+     * @static
+     * @param {string} keyName
+     * @return {*} location.search keyName value を返します
+     */
+    Query.find = function ( keyName ) {
+
+      var
+        results = Query.parse();
+
+      return results[ keyName ];
+
+    };
+
+    return Query;
+
+  }() );
+
+}( window ) );
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
+ * date 15/09/02 - 11:37
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * for eda.js
+ */
+/*jslint -W016*/
+/**
+ * document.cookie helper
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
+ *
+ * thanks MDN
+ *
+ * @module Eda
+ * @submodule Cookie
+ */
+( function ( window ) {
+
+  'use strict';
+
+  var
+    document = window.document;
+
+  window.Eda.Cookie = ( function () {
+
+    var
+      _decode = decodeURIComponent,
+      _encode = encodeURIComponent;
+
+    /**
+     * @class Cookie
+     * @static
+     * @constructor
+     */
+    function Cookie () {
+      throw new Error( 'Cookie can\'t create instance!' );
+    }
+
+    var p = Cookie.prototype;
+    p.constructor = Cookie;
+
+    /**
+     * document.cookie 取得
+     * @method item
+     * @param {string} keyName 取得 cookie name
+     * @return {string|null} cookie 値を返します、取得できない場合は null を返します。
+     * @static
+     */
+    Cookie.item = function ( keyName ) {
+
+      var
+        result = null;
+
+      if ( !!keyName ) {
+
+        result = _decode( document.cookie.replace( new RegExp("(?:(?:^|.*;)\\s*" + _encode( keyName ).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+
+      }
+
+      return result;
+
+    };
+
+    /**
+     * document.cookie 全て取得し列挙します
+     * @method all
+     * @return {Array} document.cookie key name 配列を返します
+     * @static
+     */
+    Cookie.all = function () {
+
+      var
+        cookies = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, '').split(/\s*(?:\=[^;]*)?;\s*/ ),
+        i, limit;
+
+      for ( i = 0, limit = cookies.length; i < limit; i = (i + 1)|0 ) {
+
+        cookies[ i ] = _decode( cookies[ i ] );
+
+      }
+
+      return cookies;
+
+    };
+
+    /**
+     * document.cookie 引数 keyName が存在するかを調べます
+     * @method has
+     * @param keyName document.cookie 名称
+     * @return {boolean} true / false
+     * @static
+     */
+    Cookie.has = function ( keyName ) {
+
+      var
+        result = false;
+
+      if ( !!keyName ) {
+
+        result = ( new RegExp("(?:^|;\\s*)" + _encode( keyName ).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test( document.cookie );
+
+      }
+
+      return result;
+
+    };
+
+    /**
+     * document.cookie 削除
+     * @method remove
+     * @param {String} keyName document.cookie 名称
+     * @param {String} [path] document.cookie path
+     * @param {String} [domain] document.cookie domain
+     * @return {boolean} 削除に成功したかの真偽値を返します
+     * @static
+     */
+    Cookie.remove = function ( keyName, path, domain ) {
+
+      var
+        result = false;
+
+      if ( Cookie.has( keyName ) ) {
+
+        document.cookie = _encode( keyName ) + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT' + ( !!domain ? '; domain=' + domain : '' ) + ( !!path ? '; path=' + path : '' );
+        result = true;
+
+      }
+
+      return result;
+
+    };
+
+    /**
+     * document.cookie 保存
+     * @for CookieUtil
+     * @method setItem
+     * @param {String} keyName document.cookie 名称
+     * @param {String} value document.cookie value
+     * @param {String|Number|Date|*} [end] document.cookie 期限, [ second, Date.toUTCString ]
+     * @param {String} [path] document.cookie path
+     * @param {String} [domain] document.cookie domain
+     * @param {String} [secure] document.cookie secure
+     * @return {boolean} 保存に成功したかの真偽値を返します
+     * @static
+     */
+    Cookie.set = function ( keyName, value, end, path, domain, secure ) {
+
+      if ( !keyName || /^(?:expires|max\-age|path|domain|secure)$/i.test( keyName ) ) {
+
+        return false;
+
+      }
+
+      var exp = '';
+
+      if ( !!end ) {
+
+        switch ( typeof end ) {
+
+          case 'number' :
+            exp = end === Infinity ? '; expires=Fri, 31 Dec 9999 23:59:59 GMT' : '; max-age=' + end;
+            break;
+
+          case 'string' :
+            exp = '; expires=' + end;
+            break;
+
+          default :
+            if ( end.constructor === Date ) {
+
+              exp = '; expires=' + end.toUTCString();
+
+            }
+            break;
+
+        }
+
+      }
+
+      document.cookie = _encode( keyName ) + '=' + _encode( value ) + exp + ( domain ? '; domain=' + domain : '' ) + ( path ? '; path=' + path : '' ) + (secure ? '; secure' : '' );
+      return true;
+
+    };
+
+    return Cookie;
+
+  }() );
+
+}( window ) );
 /**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
@@ -151,7 +500,7 @@ var Eda = Eda || {};
 
   'use strict';
 
-  var List = ( function () {
+  window.Eda.List = ( function () {
 
     var
       _rand = Math.random,
@@ -301,149 +650,6 @@ var Eda = Eda || {};
 /**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
- * date 15/09/01 - 17:29
- *
- * Copyright (c) 2011-2015 inazumatv.com, inc.
- *
- * Distributed under the terms of the MIT license.
- * http://www.opensource.org/licenses/mit-license.html
- *
- * This notice shall be included in all copies or substantial portions of the Software.
- *
- * for eda.js
- */
-( function ( window ) {
-
-  'use strict';
-
-  window.Eda.Query = ( function () {
-
-    var
-      _decode = window.decodeURIComponent;
-
-    /**
-     * @class Query
-     * @constructor
-     */
-    function Query () {
-
-      this.results = null;
-
-    }
-
-    var p = Query.prototype;
-    p.constructor = Query;
-
-    /**
-     * @method parse
-     * @param {string=undefined} [search] window.location.search.substring( 1 )
-     */
-    p.parse = function ( search ) {
-
-      var results = Query.parse( search );
-      this.results = results;
-
-      return results;
-
-    };
-
-    /**
-     * @method find
-     * @param {string} keyName
-     * @return {*}
-     */
-    p.find = function ( keyName ) {
-
-      var
-        results = this.results;
-
-      if ( results === null ) {
-
-        results = Query.parse();
-        this.results = results;
-
-      }
-
-      return results[ keyName ];
-
-    };
-
-    // -------------------------------------------------------
-
-    /**
-     * @method search
-     * @static
-     * @return {string}
-     */
-    Query.search = function () {
-
-      return window.location.search.substring( 1 );
-
-    };
-
-    /**
-     *
-     * @method parse
-     * @static
-     * @param {String} [search] window.location.search.substring( 1 )
-     * @return {*}
-     */
-    Query.parse = function ( search ) {
-
-      search = search || Query.search();
-
-      var
-        vars,
-        results,
-        i, limit, pair;
-
-      if ( !!search ) {
-
-
-        search = search.replace( '&amp;', '&' );
-        vars = search.split( '&' );
-        results = {};
-
-        for ( i = 0, limit = vars.length; i < limit; i = (i + 1)|0 ) {
-
-          pair = vars[ i ].split( '=' );
-          if ( pair.length === 2 ) {
-
-            results[ _decode( pair[ 0 ] ) ] = _decode( pair[ 1 ] );
-
-          }
-
-        }
-
-      }
-
-      return results;
-
-    };
-
-    /**
-     * location.search から keyName value を返します
-     * @method find
-     * @param {string} keyName
-     * @return {*} location.search keyName value を返します
-     */
-    Query.find = function ( keyName ) {
-
-      var
-        results = Query.parse();
-
-      return results[ keyName ];
-
-    };
-
-    return Query;
-
-  }() );
-
-}( window ) );
-/**
- * license inazumatv.com
- * author (at)taikiken / http://inazumatv.com
  * date 15/09/01 - 16:19
  *
  * Copyright (c) 2011-2015 inazumatv.com, inc.
@@ -586,6 +792,12 @@ var Eda = Eda || {};
  * This notice shall be included in all copies or substantial portions of the Software.
  *
  * for eda.js
+ */
+/**
+ * 文字 Utility
+ *
+ * @module Eda
+ * @submodule Str
  */
 ( function ( window ) {
 
@@ -854,6 +1066,91 @@ var Eda = Eda || {};
     };
 
     return Str;
+
+  }() );
+
+}( window ) );
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
+ * date 15/09/02 - 12:30
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * for eda.js
+ */
+( function ( window ) {
+
+  'use strict';
+
+  window.eda.Time = ( function () {
+
+    /**
+     * @class Time
+     * @static
+     * @constructor
+     */
+    function Time () {
+      throw new Error( 'Time can\'t create instance!' );
+    }
+
+    var p = Time.prototype;
+    p.constructor = Time;
+
+    /**
+     * @const SECOND
+     * @default 1000
+     * @type {number}
+     */
+    Time.SECOND = 1000;
+    /**
+     * @const MINUTE
+     * @default 1000 * 60
+     * @type {number}
+     */
+    Time.MINUTE = 1000 * 60;
+    /**
+     * @const HOUR
+     * @default 1000 * 60 * 60
+     * @type {number}
+     */
+    Time.HOUR = 1000 * 60 * 60;
+    /**
+     * @const DAY
+     * @default 1000 * 60 * 60 * 24
+     * @type {number}
+     */
+    Time.DAY = 1000 * 60 * 60 * 24;
+
+    /**
+     * @method hours
+     * @static
+     * @param {number} hour
+     * @return {Date}
+     */
+    Time.hours = function ( hour ) {
+
+      return new Date( new Date().getTime() + Time.HOUR * hour );
+
+    };
+    /**
+     * @method days
+     * @static
+     * @param {number} day
+     * @return {Date}
+     */
+    Time.days = function ( day ) {
+
+      return new Date( new Date().getTime() + Time.DAY * day );
+
+    };
+
+    return Time;
 
   }() );
 
