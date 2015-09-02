@@ -1220,7 +1220,7 @@
             "line": 1,
             "license": "inazumatv.com",
             "author": "(at)taikiken / http://inazumatv.com",
-            "date": "15/09/01 - 16:17\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nversion @@version\nbuild @@buildTime\ngithub: @@url",
+            "date": "15/09/01 - 16:17\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nThis framework is released under the GNU Public License, version 3 or later.\nhttp://www.gnu.org/licenses/gpl-3.0-standalone.html\n\nversion @@version\nbuild @@buildTime\ngithub: @@url",
             "class": "",
             "module": "Eda"
         }
