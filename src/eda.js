@@ -5,16 +5,13 @@
  *
  * Copyright (c) 2011-2015 inazumatv.com, inc.
  *
- * Distributed under the terms of the MIT license.
- * http://www.opensource.org/licenses/mit-license.html
- *
- * This notice shall be included in all copies or substantial portions of the Software.
+ * This framework is released under the GNU Public License, version 3 or later.
+ * http://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * version @@version
  * build @@buildTime
  * github: @@url
  */
-
 /**
  * @module Eda
  * @type {*}
