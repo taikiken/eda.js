@@ -63,7 +63,9 @@
             "modules": {
                 "Str": 1
             },
-            "classes": {},
+            "classes": {
+                "Str": 1
+            },
             "fors": {},
             "namespaces": {}
         },
@@ -106,6 +108,7 @@
                 "Kana": 1,
                 "List": 1,
                 "Num": 1,
+                "Str": 1,
                 "Time": 1
             },
             "fors": {},
@@ -184,14 +187,16 @@
             "name": "Str",
             "submodules": {},
             "elements": {},
-            "classes": {},
+            "classes": {
+                "Str": 1
+            },
             "fors": {},
             "is_submodule": 1,
             "namespaces": {},
             "module": "Eda",
             "namespace": "",
             "file": "src/util/Str.js",
-            "line": 15,
+            "line": 33,
             "description": "文字 Utility"
         },
         "Time": {
@@ -291,6 +296,22 @@
             "namespace": "",
             "file": "src/util/Num.js",
             "line": 32,
+            "is_constructor": 1
+        },
+        "Str": {
+            "name": "Str",
+            "shortname": "Str",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Eda",
+            "submodule": "Str",
+            "namespace": "",
+            "file": "src/util/Str.js",
+            "line": 33,
+            "static": 1,
             "is_constructor": 1
         },
         "Time": {
@@ -901,12 +922,12 @@
             "file": "src/util/Str.js",
             "line": 1,
             "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/09/01 - 18:02\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor eda.js",
-            "class": "Time",
+            "class": "Str",
             "module": "Eda"
         },
         {
             "file": "src/util/Str.js",
-            "line": 40,
+            "line": 45,
             "description": "文字長を検査します",
             "itemtype": "method",
             "name": "long",
@@ -927,13 +948,13 @@
                 "description": "文字列 length が文字長と同じかの真偽値を返します",
                 "type": "Boolean"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 54,
+            "line": 59,
             "description": "mail address validate\n\nメール形式簡易チェック",
             "itemtype": "method",
             "name": "mail",
@@ -949,13 +970,13 @@
                 "description": "文字列がメール形式かの真偽値を返します",
                 "type": "Boolean"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 73,
+            "line": 78,
             "itemtype": "method",
             "name": "phone",
             "params": [
@@ -979,13 +1000,13 @@
                 "description": "電話番号形式かを返します",
                 "type": "Boolean"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 178,
+            "line": 183,
             "itemtype": "method",
             "name": "zip",
             "static": 1,
@@ -1005,13 +1026,13 @@
                 "description": "",
                 "type": "*"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 222,
+            "line": 227,
             "description": "改行コードを LF へ統一します",
             "itemtype": "method",
             "name": "lf",
@@ -1027,13 +1048,13 @@
                 "description": "",
                 "type": "Void|string|XML"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 235,
+            "line": 240,
             "description": "改行コードを削除します",
             "itemtype": "method",
             "name": "removeNL",
@@ -1049,13 +1070,13 @@
                 "description": "",
                 "type": "Void|string|XML"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 248,
+            "line": 253,
             "description": "スペースを削除します",
             "itemtype": "method",
             "name": "removeSpace",
@@ -1071,13 +1092,13 @@
                 "description": "",
                 "type": "Void|string|XML"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 261,
+            "line": 266,
             "description": "Tabコードを削除します",
             "itemtype": "method",
             "name": "removeTab",
@@ -1093,16 +1114,17 @@
                 "description": "",
                 "type": "Void|string|XML"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },
         {
             "file": "src/util/Str.js",
-            "line": 274,
+            "line": 279,
             "description": "white space(space, tab, new line) を全て削除します",
             "itemtype": "method",
             "name": "removeWhitespace",
+            "static": 1,
             "params": [
                 {
                     "name": "str",
@@ -1114,7 +1136,7 @@
                 "description": "",
                 "type": "Void|string|XML"
             },
-            "class": "Time",
+            "class": "Str",
             "module": "Eda",
             "submodule": "Str"
         },

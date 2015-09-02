@@ -43,6 +43,7 @@
                                 <li><a href="../classes/List.html">List</a></li>
                                 <li><a href="../classes/Num.html">Num</a></li>
                                 <li><a href="../classes/Query.html">Query</a></li>
+                                <li><a href="../classes/Str.html">Str</a></li>
                                 <li><a href="../classes/Time.html">Time</a></li>
                             </ul>
                 
@@ -124,8 +125,13 @@
     var
       Num = Eda.Num;
 
+    /**
+     * @class Str
+     * @static
+     * @constructor
+     */
     function Str () {
-
+      throw new Error( &#x27;Str can\&#x27;t create instance!&#x27; );
     }
 
     var p = Str.prototype;
@@ -369,6 +375,7 @@
      * white space(space, tab, new line) を全て削除します
      *
      * @method removeWhitespace
+     * @static
      * @param {String} str
      * @return {void|string|XML}
      */

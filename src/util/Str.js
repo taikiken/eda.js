@@ -30,8 +30,13 @@
     var
       Num = Eda.Num;
 
+    /**
+     * @class Str
+     * @static
+     * @constructor
+     */
     function Str () {
-
+      throw new Error( 'Str can\'t create instance!' );
     }
 
     var p = Str.prototype;
@@ -275,6 +280,7 @@
      * white space(space, tab, new line) を全て削除します
      *
      * @method removeWhitespace
+     * @static
      * @param {String} str
      * @return {void|string|XML}
      */

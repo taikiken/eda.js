@@ -6,6 +6,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "List",
         "Num",
         "Query",
+        "Str",
         "Time"
     ],
     "modules": [
