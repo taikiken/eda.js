@@ -1,12 +1,16 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
+        "Cookie",
+        "CookieUtil",
         "Kana",
         "List",
         "Num",
-        "Query"
+        "Query",
+        "Time"
     ],
     "modules": [
+        "Cookie",
         "Eda",
         "Kana",
         "Num",
@@ -14,6 +18,11 @@ YUI.add("yuidoc-meta", function(Y) {
         "Str"
     ],
     "allModules": [
+        {
+            "displayName": "Cookie",
+            "name": "Cookie",
+            "description": "document.cookie helper\n\nhttps://developer.mozilla.org/en-US/docs/Web/API/document.cookie\n\nthanks MDN"
+        },
         {
             "displayName": "Eda",
             "name": "Eda"
