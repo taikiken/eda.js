@@ -58,12 +58,16 @@ var scripts = [];
 
 scripts.push( dir.src + '/eda.js' );
 
+// net
+scripts.push( dir.src + '/net/Query.js' );
+scripts.push( dir.src + '/net/Cookie.js' );
+
 // util
 scripts.push( dir.src + '/util/Num.js' );
 scripts.push( dir.src + '/util/List.js' );
-scripts.push( dir.src + '/util/Query.js' );
 scripts.push( dir.src + '/util/Kana.js' );
 scripts.push( dir.src + '/util/Str.js' );
+scripts.push( dir.src + '/util/Time.js' );
 
 
 // ------------------------------------------------------

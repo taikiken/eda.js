@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>Cookie</title>
+  <script src="../libs/eda.js"></script>
+  <style>
+    .answer {
+      /*display: inline-block;*/
+      padding: 3px;
+      border: 1px solid #ccc;
+    }
+    span {
+      display: block;
+    }
+    .red {
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+<h2>Cookie</h2>
+
+<p>
+  <span id="s01">Cookie.set( 'test', 1, Time.hour( 1 ), '/' )</span>
+  <span id="s01-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s02">Cookie.item( 'test' )</span>
+  <span id="s02-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s03">Cookie.all()</span>
+  <span id="s03-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s04">Cookie.has( 'test' )</span>
+  <span id="s04-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s05">Cookie.remove( 'test' )</span>
+  <span id="s05-answer" class="answer"></span>
+</p>
+
+<p>
+  <span id="s06">Cookie.item( '_ga' )</span>
+  <span id="s06-answer" class="answer"></span>
+</p>
+
+<script>
+  ( function ( window ) {
+
+    'use strict';
+
+    var
+      document = window.document,
+      Eda = window.Eda;
+
+    document.getElementById( 's01-answer' ).innerHTML = Eda.Cookie.set( 'test', 1, Eda.Time.hours( 1 ), '/' ) + '';
+    document.getElementById( 's02-answer' ).innerHTML = Eda.Cookie.item( 'test' );
+    document.getElementById( 's03-answer' ).innerHTML = Eda.Cookie.all().toString();
+    document.getElementById( 's04-answer' ).innerHTML = Eda.Cookie.has( 'test' ).toString();
+    document.getElementById( 's05-answer' ).innerHTML = Eda.Cookie.remove( 'test' ).toString();
+    document.getElementById( 's06-answer' ).innerHTML = Eda.Cookie.item( '_ga' ).toString();
+
+    Eda.Cookie.set( 'test', 'a', Eda.Time.hours( 1 ), '/' )
+
+  }( window ) );
+</script>
+</body>
+</html>
